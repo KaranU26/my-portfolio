@@ -1,8 +1,6 @@
 
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
-import { JSX, SVGProps } from "react"
-import { JSX, SVGProps } from "react"
 
 export default function Footer() {
   return (
