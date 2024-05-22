@@ -77,10 +77,12 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "lavender-dream":{"0%":{"background":"linear-gradient(-45deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)","backgroundSize":"200% 200%","backgroundPosition":"0% 100%"},"50%":{"background":"linear-gradient(-90deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)","backgroundSize":"200% 200%","backgroundPosition":"100% 0%"},"100%":{"background":"linear-gradient(-45deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)","backgroundSize":"200% 200%","backgroundPosition":"0% 100%"}},
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "lavender-dream":"lavender-dream 5s ease infinite"
       },
     },
   },
