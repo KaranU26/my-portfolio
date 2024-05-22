@@ -1,5 +1,8 @@
 
 import Link from "next/link"
+import { JSX, SVGProps } from "react"
+import { JSX, SVGProps } from "react"
+import { JSX, SVGProps } from "react"
 
 export default function Footer() {
   return (
@@ -25,7 +28,7 @@ export default function Footer() {
   )
 }
 
-function GithubIcon(props) {
+function GithubIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -46,7 +49,7 @@ function GithubIcon(props) {
 }
 
 
-function TwitterIcon(props) {
+function TwitterIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -66,7 +69,7 @@ function TwitterIcon(props) {
 }
 
 
-function YoutubeIcon(props) {
+function YoutubeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
