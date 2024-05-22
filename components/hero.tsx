@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -125,11 +126,13 @@ export default function HeroSection() {
           </div>
           {/* Col */}
           <div className="relative ms-4">
-            <img
-              className="w-full rounded-md"
-              src="https://placehold.co/800x700"
-              alt="Image Description"
-            />
+            <Image               
+                className="w-full rounded-3xl"
+                src="/me.jpg"
+                alt="Image Description"
+                width={500}
+                height={500}
+             />
           </div>
           {/* End Col */}
         </div>

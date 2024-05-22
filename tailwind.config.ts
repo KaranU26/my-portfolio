@@ -18,10 +18,20 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(at top left, var(--tw-gradient-stops))',
+      },
+      blur: {
+        '4xl': '64px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        gradientStart: 'rgba(255, 255, 255, 0.5)',
+        gradientMiddle: 'rgba(238, 174, 202, 0.5)',
+        gradientEnd: 'rgba(148, 187, 233, 0.5)',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
