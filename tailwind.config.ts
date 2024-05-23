@@ -1,7 +1,12 @@
 import type { Config } from "tailwindcss"
 
+const svgToDataUri = require("mini-svg-data-uri");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -77,29 +82,60 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
+        text: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
           },
-          "33%": {
-            transform: "translate(30px, -50px) scale(1.1)",
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
           },
-          "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
+        },
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-10px)",
           },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)",
-          }
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "blob": "blob 7s infinite"
+        "text": 'text 5s ease infinite',
+        "slidein": "slidein 1s ease var(--slidein-delay, 0) forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), addVariablesForColors,
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-dot-thick": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+  ],
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+});
+}
 
 export default config

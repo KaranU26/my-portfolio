@@ -1,50 +1,44 @@
+"use client";
+import { motion } from "framer-motion";
+import { Highlight, HeroHighlight } from "@/components/hero-highlight";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
-    <div className="relative overflow-hidden p-24 content-center">
-      <div className="relative w-full max-w-lg">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-0 -bottom-8 -left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-      </div>
-      <div className="relative z-10">
-        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
-          <div className="max-w-2xl text-center mx-auto">
-            <p className="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-              Preline: A vision for 2023
-            </p>
-    
-            <div className="mt-5 max-w-2xl">
-              <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-                The Intuitive Web Solutions
-              </h1>
-            </div>
-    
-            <div className="mt-5 max-w-3xl">
-              <p className="text-lg text-gray-600 dark:text-neutral-400">Preline UI is an open-source set of prebuilt UI components, ready-to-use examples and Figma design system based on the utility-first Tailwind CSS framework.</p>
-            </div>
-    
-            <div className="mt-8 gap-3 flex justify-center">
-              <a className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                Get started
-                <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-              </a>
-              <a className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-800" href="#">
-                <svg className="flex-shrink-0 size-4" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.875 18C8.531 18 9.875 16.656 9.875 15V12H6.875C5.219 12 3.875 13.344 3.875 15C3.875 16.656 5.219 18 6.875 18Z" fill="#0ACF83"></path>
-                  <path d="M3.875 9C3.875 7.344 5.219 6 6.875 6H9.875V12H6.875C5.219 12 3.875 10.656 3.875 9Z" fill="#A259FF"></path>
-                  <path d="M3.875 3C3.875 1.344 5.219 0 6.875 0H9.875V6H6.875C5.219 6 3.875 4.656 3.875 3Z" fill="#F24E1E"></path>
-                  <path d="M9.87501 0H12.875C14.531 0 15.875 1.344 15.875 3C15.875 4.656 14.531 6 12.875 6H9.87501V0Z" fill="#FF7262"></path>
-                  <path d="M15.875 9C15.875 10.656 14.531 12 12.875 12C11.219 12 9.87501 10.656 9.87501 9C9.87501 7.344 11.219 6 12.875 6C14.531 6 15.875 7.344 15.875 9Z" fill="#1ABCFE"></path>
-                </svg>
-                Preline Figma
-              </a>
-            </div>
-          </div>
+    <HeroHighlight>
+      <div className="flex flex-col items-center justify-center space-y-10">
+        <div className="relative w-56 h-56">
+          <Image
+            src="/me.jpg" // Ensure the path is correct
+            layout="fill" // Fill the container
+            objectFit="cover" // Cover to maintain aspect ratio
+            alt="Picture of the author"
+            className="rounded-full"
+          />
         </div>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: [20, -5, 0],
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.4, 0.0, 0.2, 1],
+          }}
+          className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white text-opacity-80 max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+        >
+          As a Full Stack Web Developer from Toronto, Canada, I specialize in creating beautiful web applications.
+          My name is{" "}
+          <Highlight className="text-white">
+            Karandeep Ubhi
+          </Highlight>
+        </motion.h1>
       </div>
-    </div>
+    </HeroHighlight>
   );
 }
