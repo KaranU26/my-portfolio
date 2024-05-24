@@ -10,9 +10,9 @@ export function HeroSection() {
       <div className="flex flex-col items-center justify-center space-y-10">
         <div className="relative w-56 h-56">
           <Image
-            src="/me.jpg" // Ensure the path is correct
-            layout="fill" // Fill the container
-            objectFit="cover" // Cover to maintain aspect ratio
+            src="/me.jpg" 
+            layout="fill" 
+            objectFit="cover" 
             alt="Picture of the author"
             className="rounded-full"
           />
