@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Highlight, HeroHighlight } from "@/components/hero-highlight";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { TextGenerateHero } from "./text-generation-hero";
 
 export function HeroSection() {
   return (
@@ -32,12 +33,11 @@ export function HeroSection() {
           }}
           className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white text-opacity-80 max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
         >
-          As a Full Stack Web Developer from Toronto, Canada, I specialize in creating beautiful web applications.
-          My name is{" "}
           <Highlight className="text-white">
-            Karandeep Ubhi
+            Full Stack Web Developer
           </Highlight>
         </motion.h1>
+        <TextGenerateHero />
       </div>
     </HeroHighlight>
   );
