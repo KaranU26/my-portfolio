@@ -5,46 +5,52 @@ const cardData = [
   {
     title: "Ruby on Rails",
     description: "Hover over this card to reveal an awesome effect. Learn more about Rails.",
-    hoverText: "Rails Magic"
+    hoverText: "Rails Magic",
+    imageUrl: "/Ruby.png"
   },
   {
-    title: "React",
+    title: "Javascript",
     description: "Hover over this card to see React in action. Discover component-based architecture.",
-    hoverText: "React Power"
+    hoverText: "React Power",
+    imageUrl: "/js.png"
   },
   {
-    title: "Node.js",
+    title: "PostgreSQL",
     description: "Hover over this card to explore Node.js. Unleash the power of server-side JavaScript.",
-    hoverText: "Node Efficiency"
+    hoverText: "Node Efficiency",
+    imageUrl: "/pg.png"
   },
   {
-    title: "Python",
+    title: "Nex JS",
     description: "Hover over this card to explore Python. Dive into versatile programming.",
-    hoverText: "Python Versatility"
+    hoverText: "Python Versatility",
+    imageUrl: "/next.png"
   },
   {
     title: "Django",
     description: "Hover over this card to learn about Django. Explore the high-level Python framework.",
-    hoverText: "Django Power"
+    hoverText: "Django Power",
+    imageUrl: "/path/to/django.jpg"
   },
   {
     title: "Vue.js",
     description: "Hover over this card to see Vue.js in action. Learn about this progressive JavaScript framework.",
-    hoverText: "Vue Simplicity"
+    hoverText: "Vue Simplicity",
+    imageUrl: "/path/to/vuejs.jpg"
   }
 ];
 
 export function Technologies() {
   return (
-    <div className="flex flex-wrap justify-center mx-auto p-4 pb-16 w-full max-w-7xl">
+    <div className="flex flex-wrap justify-center mx-auto p-4 py-48 pb-16 w-full max-w-7xl">
       {cardData.map((card, index) => (
         <div key={index} className="border border-white/[0.2] m-4 max-w-[30%] h-[30rem]">
           <div className="relative space-y-4 p-4 h-full flex flex-col">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
-            <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
+            <Icon className="absolute h-6 w-6 -top-7 -right-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
-            <EvervaultCard text={card.title} />
+            <EvervaultCard imageUrl={card.imageUrl} />
             <h2 className="text-white text-sm font-light mt-4">
               {card.description}
             </h2>
