@@ -31,6 +31,9 @@ export const EvervaultCard = ({
     setRandomString(str);
   }
 
+  // Provide a default image URL if imageUrl is undefined
+  const validImageUrl = imageUrl || "/default-image.png";
+
   return (
     <div
       className={cn(
@@ -51,7 +54,7 @@ export const EvervaultCard = ({
           <div className="relative h-40 w-40 rounded-full flex items-center justify-center">
             <div className="relative h-48 w-48 flex items-center justify-center overflow-hidden z-20">
               <Image
-                src={imageUrl}
+                src={validImageUrl}
                 alt="card image"
                 className="object-contain shadow-lg"
                 layout="fill"
@@ -70,6 +73,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
   return (
     <div className="pointer-events-none">
+      <div className="absolute inset-0 rounded-2xl bg-black"></div> {/* Default black background */}
       <div className="absolute inset-0 rounded-2xl [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
       <motion.div
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
@@ -83,6 +87,11 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
           {randomString}
         </p>
       </motion.div>
+      <div className="absolute inset-0 rounded-2xl mix-blend-overlay opacity-80">
+        <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-gray-400 font-mono font-bold">
+          {randomString}
+        </p>
+      </div>
     </div>
   );
 }
