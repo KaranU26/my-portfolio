@@ -1,6 +1,7 @@
 import React from "react";
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 import { LampContainer } from "@/components/ui/lamp";
+import { HeaderSparkles } from "./ui/header";
 
 const cardData = [
   {
@@ -38,24 +39,30 @@ const cardData = [
     description: "Hover over this card to see Vue.js in action. Learn about this progressive JavaScript framework.",
     hoverText: "Vue Simplicity",
     imageUrl: "/python.png"
+  },
+  {
+    title: "React",
+    description: "Hover over this card to learn about Django. Explore the high-level Python framework.",
+    hoverText: "Django Power",
+    imageUrl: "/React.png"
+  },
+  {
+    title: "Python",
+    description: "Hover over this card to see Vue.js in action. Learn about this progressive JavaScript framework.",
+    hoverText: "Vue Simplicity",
+    imageUrl: "/python.png"
   }
 ];
 
 export function Technologies() {
   return (
-    <div className="py-20">
-      <div className="flex flex-wrap justify-center mx-auto p-4 pb-16 w-full max-w-7xl">
+    <div>
+      <HeaderSparkles />
+      <div className="flex flex-wrap justify-center mx-auto pb-16 w-full max-w-5xl">
         {cardData.map((card, index) => (
-          <div key={index} className="border border-white/[0.2] m-4 max-w-[30%] h-[30rem]">
-            <div className="relative space-y-4 p-4 h-full flex flex-col">
-              <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
-              <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
-              <Icon className="absolute h-6 w-6 -top-7 -right-3 text-white" />
-              <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
+          <div key={index} className="border border-white/[0.2] m-2 max-w-[25%] h-[15rem]">
+            <div className="relative space-y-4 p-6 h-full flex flex-col">
               <EvervaultCard imageUrl={card.imageUrl} />
-              <h2 className="text-white text-sm font-lg font-semibold opacity-80 mt-4">
-                {card.description}
-              </h2>
             </div>
           </div>
         ))}

@@ -52,7 +52,7 @@ export const EvervaultCard = ({
         />
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-40 w-40 rounded-full flex items-center justify-center">
-            <div className="relative h-48 w-48 flex items-center justify-center overflow-hidden z-20">
+            <div className="relative h-20 w-20 flex items-center justify-center overflow-hidden z-20">
               <Image
                 src={validImageUrl}
                 alt="card image"
