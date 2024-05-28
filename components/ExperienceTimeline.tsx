@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CardBody, CardContainer, CardItem } from './ui/3d-card';
+import { TracingBeam } from '@/components/ui/tracing-beam'; // Import TracingBeam component
 import { Link } from 'lucide-react';
 
 interface Experience {
@@ -80,10 +81,7 @@ const experiences: Experience[] = [
 const ExperienceTimeline: React.FC = () => {
   return (
     <div className="relative pt-56 flex justify-center bg-black text-white">
-      <div className="absolute inset-0 flex justify-center">
-        <div className="timeline-line"></div>
-      </div>
-      <div className="space-y-36 max-w-7xl mx-auto">
+      <TracingBeam className="space-y-36 max-w-7xl mx-auto">
         {experiences.map((experience) => (
           <div
             data-aos="fade-up"
@@ -132,7 +130,7 @@ const ExperienceTimeline: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
+      </TracingBeam>
     </div>
   );
 };
