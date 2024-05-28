@@ -9,9 +9,9 @@ export function HeroSection() {
   return (
     <HeroHighlight>
       <div className="flex flex-col items-center justify-center space-y-5">
-        <div className="relative w-56 h-56">
+        <div className="relative w-80 h-80">
           <Image
-            src="/me.jpg" 
+            src="/profile.gif" 
             layout="fill" 
             objectFit="cover" 
             alt="Picture of the author"
