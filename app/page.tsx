@@ -10,12 +10,10 @@ export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col ">
       <HeroSection />
-      <TracingBeam className="px-6">
         <Technologies />
         <div className="py-20">
           <ExperienceTimeline />
         </div>
-      </TracingBeam>
     </main>
   );
 }
