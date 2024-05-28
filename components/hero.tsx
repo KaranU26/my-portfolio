@@ -8,7 +8,7 @@ import { TextGenerateHero } from "./text-generation-hero";
 export function HeroSection() {
   return (
     <HeroHighlight>
-      <div className="flex flex-col items-center justify-center space-y-10">
+      <div className="flex flex-col items-center justify-center space-y-5">
         <div className="relative w-56 h-56">
           <Image
             src="/me.jpg" 

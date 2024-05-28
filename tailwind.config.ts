@@ -82,6 +82,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shimmer: {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        },
         text: {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -108,6 +116,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "text": 'text 5s ease infinite',
         "slidein": "slidein 1s ease var(--slidein-delay, 0) forwards",
+        "shimmer": "shimmer 2s linear infinite"
       },
     },
   },
