@@ -9,11 +9,13 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col ">
-      <HeroSection />
-        <Technologies />
-        <div className="py-20">
-          <ExperienceTimeline />
-        </div>
+      <div className="my-10">
+        <HeroSection />
+      </div>
+      <Technologies />
+      <div className="py-10">
+        <ExperienceTimeline />
+      </div>
     </main>
   );
 }
