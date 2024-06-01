@@ -2,6 +2,7 @@
 
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import AboutSection from "@/components/about"; // Ensure the path is correct
+import { ContactForm } from "@/components/contact-form";
 import { HeroSection } from "@/components/hero";
 import { Technologies } from "@/components/technologies";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -15,6 +16,9 @@ export default function Home() {
       <Technologies />
       <div className="py-10">
         <ExperienceTimeline />
+      </div>
+      <div className="py-10">
+        <ContactForm />
       </div>
     </main>
   );
