@@ -1,6 +1,6 @@
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import AboutSection from "@/components/about"; // Ensure the path is correct
-import { ContactForm } from "@/components/contact-form";
+import Email from "@/components/email-me";
 import { HeroSection } from "@/components/hero";
 
 export default function Home() {
@@ -12,9 +12,7 @@ export default function Home() {
       <div className="py-10 w-full">
         <ExperienceTimeline />
       </div>
-      <div className="py-10 w-full">
-        <ContactForm />
-      </div>
+      <Email />
     </main>
   );
 }
