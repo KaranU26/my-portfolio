@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="flex flex-col gap-y-5 rounded-lg px-7 py-5 md:px-10">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2">
-        <h2 className="mr-6 hidden lg:flex scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-2xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" href="#">
+        <h2 className="mr-6 hidden lg:flex scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-2xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
           Karan.dev
         </h2>
         </div>
