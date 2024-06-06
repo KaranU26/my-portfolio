@@ -26,15 +26,17 @@ export const HeroHighlight = ({
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
+
   return (
     <div
       className={cn(
-        "relative h-screen flex items-center bg-black justify-center w-full group",
+        "relative flex items-center bg-black justify-center w-full group",
+        "h-screen md:h-3/4 lg:h-2/3 xl:h-1/2",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
     >
-      <div className="absolute inset-0 bg-dot-thick-neutral-800  pointer-events-none" />
+      <div className="absolute inset-0 bg-dot-thick-neutral-800 pointer-events-none" />
       <motion.div
         className="pointer-events-none bg-dot-thick-indigo-400 absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100"
         style={{
@@ -54,7 +56,6 @@ export const HeroHighlight = ({
           `,
         }}
       />
-
       <div className={cn("relative z-20", className)}>{children}</div>
     </div>
   );

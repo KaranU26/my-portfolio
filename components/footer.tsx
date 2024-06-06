@@ -1,88 +1,73 @@
+import {
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 
-import Link from "next/link"
-import { JSX, SVGProps } from "react"
+interface Icon {
+  icon: JSX.Element;
+  url: string;
+}
+
+const icons: Icon[] = [
+  { icon: <LinkedInLogoIcon />, url: "#" },
+  { icon: <InstagramLogoIcon />, url: "#" },
+  { icon: <TwitterLogoIcon />, url: "#" },
+];
+
+type Link = {
+  text: string;
+  url: string;
+};
+
+const links: Link[] = [
+  { text: "About", url: "#" },
+  { text: "Services", url: "#" },
+  { text: "Contact", url: "#" },
+];
 
 export default function Footer() {
   return (
-    <div className="dark bg-gray-900 text-white py-24">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <Link className="text-white hover:text-gray-300" href="#">
-            <YoutubeIcon className="h-6 w-6" />
-            <span className="sr-only">YouTube</span>
-          </Link>
-          <Link className="text-white hover:text-gray-300" href="#">
-            <GithubIcon className="h-6 w-6" />
-            <span className="sr-only">GitHub</span>
-          </Link>
-          <Link className="text-white hover:text-gray-300" href="#">
-            <TwitterIcon className="h-6 w-6" />
-            <span className="sr-only">Twitter</span>
-          </Link>
+    <footer className="flex flex-col gap-y-5 rounded-lg px-7 py-5 md:px-10">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-x-2">
+          <img
+            className="h-5 w-5"
+            src="https://magicui.design/icon.png"
+            alt="MagicUI Logo"
+          />
+          <h2 className="text-lg font-bold text-neutral-900 dark:text-white">
+            Magic UI
+          </h2>
         </div>
-        <p className="mt-4 md:mt-0 text-sm text-gray-300">© 2024 Acme Inc. All rights reserved.</p>
+
+        <div className="flex gap-x-2">
+          {icons.map((icon, index) => (
+            <a
+              key={index}
+              href={icon.url}
+              className="flex h-5 w-5 items-center justify-center text-neutral-400 transition-all duration-100 ease-linear hover:text-neutral-900 hover:underline hover:underline-offset-4 dark:font-medium dark:text-neutral-500 hover:dark:text-neutral-100"
+            >
+              {icon.icon}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
-
-function GithubIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
-    </svg>
-  )
-}
-
-
-function TwitterIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-    </svg>
-  )
-}
-
-
-function YoutubeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-      <path d="m10 15 5-3-5-3z" />
-    </svg>
-  )
+      <div className="flex flex-col justify-between gap-y-5 md:flex-row md:items-center">
+        <ul className="flex flex-col gap-x-5 gap-y-2 text-neutral-500 md:flex-row md:items-center ">
+          {links.map((link, index) => (
+            <li
+              key={index}
+              className="text-[15px]/normal font-medium text-neutral-400 transition-all duration-100 ease-linear hover:text-neutral-900 hover:underline hover:underline-offset-4 dark:font-medium dark:text-neutral-400 hover:dark:text-neutral-100"
+            >
+              <a href={link.url}>{link.text}</a>
+            </li>
+          ))}
+        </ul>
+        <div className="flex items-center justify-between text-sm font-medium tracking-tight text-neutral-500 dark:text-neutral-400">
+          <p>All right reserverd.</p>
+        </div>
+      </div>
+    </footer>
+  );
 }

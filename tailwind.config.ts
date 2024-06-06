@@ -85,6 +85,15 @@ const config = {
               transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
           },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -133,6 +142,8 @@ const config = {
         "shimmer": "shimmer 2s linear infinite",
         'gradient': 'gradient 8s linear infinite',
         'orbit': "orbit calc(var(--duration)*1s) linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "grid": "grid 15s linear infinite",
       },
     },
   },
