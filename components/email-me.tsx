@@ -181,7 +181,7 @@ export default function Email() {
                   Lets Connect!
                 </h1>
                 <p className="mt-2">
-                  I'm always looking to learn new things and improve my skills.
+                  I&apos;m always looking to learn new things and improve my skills.
                   Lets get better together!
                 </p>
                 <a
