@@ -9,6 +9,9 @@ export default function NavBar() {
     <header className="flex h-20 w-full shrink-0 justify-between items-center px-4 md:px-6 shadow-bottom bg-black">
       <Sheet>
         <SheetTrigger asChild>
+          <Link className="lg:hidden scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-2xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" href="#">
+            Karan.dev
+          </Link>
         </SheetTrigger>
         <SheetContent side="left">
           <Link className="mr-6 hidden lg:flex" href="#">
@@ -36,28 +39,26 @@ export default function NavBar() {
       </Link>
 
       <div className="flex flex-row gap-2 items-center">
-      <div className="flex items-center">
-        <Link className="text-white hover:text-gray-300" href="https://www.linkedin.com/in/karandeep-ubhi/" target="_blank" rel="noopener noreferrer">
-          <LinkedInIcon className="h-8 w-8 text-white align-middle" />
-        </Link>
+        <div className="flex items-center">
+          <Link className="text-white hover:text-gray-300" href="https://www.linkedin.com/in/karandeep-ubhi/" target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon className="h-8 w-8 text-white align-middle" />
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <Link className="text-white hover:text-gray-300" href="https://github.com/KaranU26" target="_blank" rel="noopener noreferrer">
+            <GithubIcon className="h-8 w-8 text-white align-middle" />
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <button className="inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </button>
+        </div>
       </div>
-      <div className="flex items-center">
-        <Link className="text-white hover:text-gray-300" href="https://github.com/KaranU26" target="_blank" rel="noopener noreferrer">
-          <GithubIcon className="h-8 w-8 text-white align-middle" />
-        </Link>
-      </div>
-      <div className="flex items-center">
-        <button className="inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        </button>
-      </div>
-    </div>
-
-
-
     </header>
   )
 }
+
 
 function LinkedInIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
