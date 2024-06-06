@@ -69,30 +69,6 @@ export function HeroSection() {
             >
               Hi! I am a Full Stack Developer based in Toronto, ON. Feel free to reach out to me for anything!
             </motion.p>
-            <div className="relative flex h-full w-full max-w-8xl flex-col items-center justify-center rounded-lg mt-8 md:shadow-xl">
-              <div className="w-full flex justify-center">
-                <Dock className="flex space-x-4">
-                  <DockIcon>
-                    <Icons.ruby className="h-10 w-10" />
-                  </DockIcon>
-                  <DockIcon>
-                    <Icons.next className="h-10 w-10" />
-                  </DockIcon>
-                  <DockIcon>
-                    <Icons.javascript className="h-10 w-10" />
-                  </DockIcon>
-                  <DockIcon>
-                    <Icons.typescript className="h-10 w-10" />
-                  </DockIcon>
-                  <DockIcon>
-                    <Icons.react className="h-10 w-10" />
-                  </DockIcon>
-                  <DockIcon>
-                    <Icons.postgres className="h-10 w-10" />
-                  </DockIcon>
-                </Dock>
-              </div>
-            </div>
           </div>
         </div>
 
