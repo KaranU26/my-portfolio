@@ -20,37 +20,37 @@ const tiles = [
   {
     icon: <HeartHandshake className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
     icon: <Globe className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
     icon: <File className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-green-500 via-teal-500 to-emerald-600 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-green-500 via-teal-500 to-emerald-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
     icon: <Shield className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
     icon: <Rss className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
     icon: <BarChart className="size-full" />,
     bg: (
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 opacity-70 blur-[20px] filter"></div>
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 opacity-70 blur-[20px] filter"></div>
     ),
   },
 ];
@@ -122,7 +122,7 @@ export default function Email() {
   }, []);
 
   const email = "karanubhi26@gmail.com";
-  const subject = "Lets Connect!"; 
+  const subject = "Lets Connect!";
   const body = "Body of the email";
 
   return (
@@ -172,7 +172,7 @@ export default function Email() {
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
-            <div className="absolute z-10">
+            <div className="absolute z-10 flex flex-col items-center text-center">
               <div className="mx-auto w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-[2rem] border p-3 shadow-2xl backdrop-blur-md bg-black/10">
                 <HeartHandshake className="mx-auto w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-white" />
               </div>
@@ -180,7 +180,7 @@ export default function Email() {
                 <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
                   Lets Connect!
                 </h1>
-                <p className="mt-2 text-sm sm:text-base lg:text-lg">
+                <p className="mt-2 text-sm sm:text-base lg:text-lg max-w-xs sm:max-w-sm lg:max-w-md">
                   I&apos;m always looking to learn new things and improve my skills.
                   Lets get better together!
                 </p>
