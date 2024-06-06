@@ -94,7 +94,7 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative size-20 cursor-pointer overflow-hidden rounded-2xl border p-4",
+        "relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 cursor-pointer overflow-hidden rounded-2xl border p-4",
         // dark styles
         "transform-gpu bg-transparent [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
       )}
@@ -127,7 +127,7 @@ export default function Email() {
 
   return (
     <section id="cta">
-      <div className="py-14">
+      <div className="py-14 px-4 md:px-6">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee
@@ -173,14 +173,14 @@ export default function Email() {
               ))}
             </Marquee>
             <div className="absolute z-10">
-              <div className="mx-auto size-24 rounded-[2rem] border p-3 shadow-2xl backdrop-blur-md bg-black/10 lg:size-32">
-                <HeartHandshake className="mx-auto size-16 text-white lg:size-24" />
+              <div className="mx-auto w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-[2rem] border p-3 shadow-2xl backdrop-blur-md bg-black/10">
+                <HeartHandshake className="mx-auto w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-white" />
               </div>
               <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
-                <h1 className="text-3xl font-bold lg:text-4xl">
+                <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
                   Lets Connect!
                 </h1>
-                <p className="mt-2">
+                <p className="mt-2 text-sm sm:text-base lg:text-lg">
                   I&apos;m always looking to learn new things and improve my skills.
                   Lets get better together!
                 </p>

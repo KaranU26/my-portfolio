@@ -9,7 +9,7 @@ export default function NavBar() {
     <header className="flex h-20 w-full shrink-0 justify-between items-center px-4 md:px-6 shadow-bottom bg-black">
       <Sheet>
         <SheetTrigger asChild>
-          <Link className="lg:hidden scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-2xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" href="#">
+          <Link className="lg:hidden scroll-m-20 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" href="#">
             Karan.dev
           </Link>
         </SheetTrigger>
